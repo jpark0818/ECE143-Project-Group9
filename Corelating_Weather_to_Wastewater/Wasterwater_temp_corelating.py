@@ -1,6 +1,7 @@
 import pandas as pd
 
 def load_wastewater(path):
+
     df = pd.read_csv(path)
     df['Sample_Date'] = pd.to_datetime(df['Sample_Date'])
     df = df.set_index('Sample_Date')
@@ -17,6 +18,9 @@ def load_weather(path):
 
 
 def merge_and_correlate(wastewater_csv, weather_csv):
+    '''
+    Merges wastewater and weather datasets and computes correlations between Z-scores and temperature.
+    '''
     wastewater_data = load_wastewater(wastewater_csv)
     weather_data = load_weather(weather_csv)
 
@@ -39,10 +43,7 @@ def merge_and_correlate(wastewater_csv, weather_csv):
 def weekly_correlation(wastewater_data, weather_data, window=7):
     """
     Computes 7-day rolling-average correlations between wastewater z-scores
-    and weather (min, max, and avg temps).
-
-    ww: wastewater dataframe (indexed by date)
-    wx: weather dataframe (indexed by date)
+    and weather
     """
 
     df = wastewater_data.join(weather_data, how="inner")
