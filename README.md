@@ -1,4 +1,5 @@
 # ECE143-Project-Group9
+Recorded video link: https://youtu.be/_bcKOI19CIg
 FA25 ECE 143 Project Group Code Repository
 ```
 Directory structure:
