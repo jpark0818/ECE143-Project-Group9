@@ -1,6 +1,6 @@
 # ECE143-Project-Group9
 FA25 ECE 143 Project Group Code Repository
-
+```
 Directory structure:
 .
 ├── cache
@@ -62,3 +62,4 @@ Directory structure:
     ├── weather_Point Loma.csv
     ├── weather_South Bay.csv
     └── weather_vis.py
+```
